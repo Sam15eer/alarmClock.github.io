@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<!-- The HTML document starts here -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Alarm Clock in JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="wrapper">
-      <img src="./files/clock.png" alt="clock">
-      <h1>00:00:00 PM</h1>
-      <div class="content">
-        <div class="column">
+    <div class="wrapper"> <!-- A container for the alarm clock -->
+      <img src="./files/clock.png" alt="clock"> <!-- An image of a clock -->
+      <h1>00:00:00 PM</h1> <!-- Placeholder for displaying the current time -->
+      <div class="content"> <!-- A container for the time selection elements -->
+        <div class="column"> <!-- Container for the hour selection -->
           <select>
-            <option value="Hour" selected disabled hidden>Hour</option>
+            <option value="Hour" selected disabled hidden>Hour</option> <!-- Default disabled option -->
           </select>
         </div>
-        <div class="column">
+        <div class="column"> <!-- Container for the minute selection -->
           <select>
-            <option value="Minute" selected disabled hidden>Minute</option>
+            <option value="Minute" selected disabled hidden>Minute</option> <!-- Default disabled option -->
           </select>
         </div>
-        <div class="column">
+        <div class="column"> <!-- Container for the AM/PM selection -->
           <select>
-            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+            <option value="AM/PM" selected disabled hidden>AM/PM</option> <!-- Default disabled option -->
           </select>
         </div>
       </div>
-      <button>Set Alarm</button>
+      <button>Set Alarm</button> <!-- Button to set or clear the alarm -->
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
   </body>
-</html>
+</html> <!-- The HTML document ends here -->

@@ -1,11 +1,14 @@
+// JavaScript code for the alarm clock functionality
+
 const currentTime = document.querySelector("h1"),
 content = document.querySelector(".content"),
 selectMenu = document.querySelectorAll("select"),
 setAlarmBtn = document.querySelector("button");
 
 let alarmTime, isAlarmSet,
-ringtone = new Audio("./files/ringtone.mp3");
+ringtone = new Audio("./files/ringtone.mp3"); // Audio file for the alarm ringtone
 
+// Function to create options for hour, minute, and AM/PM selection
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
     let option = `<option value="${i}">${i}</option>`;
@@ -24,6 +27,7 @@ for (let i = 2; i > 0; i--) {
     selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
+// Function to update the current time every second
 setInterval(() => {
     let date = new Date(),
     h = date.getHours(),
@@ -40,12 +44,14 @@ setInterval(() => {
     s = s < 10 ? "0" + s : s;
     currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
 
+    // Check if the current time matches the alarm time, and play the ringtone if needed
     if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
         ringtone.loop = true;
     }
 });
 
+// Function to set or clear the alarm
 function setAlarm() {
     if (isAlarmSet) {
         alarmTime = "";
@@ -65,4 +71,4 @@ function setAlarm() {
     setAlarmBtn.innerText = "Clear Alarm";
 }
 
-setAlarmBtn.addEventListener("click", setAlarm);
+setAlarmBtn.addEventListener("click",setAlarm);
